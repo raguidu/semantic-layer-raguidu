@@ -1,0 +1,16 @@
+models:
+  - name: users
+    description: This table contains user information
+    columns:
+      - name: id
+        description: User ID
+      - name: name
+        description: User name
+      - name: email
+        description: User email
+        type: 123 # Invalid type, should be a string
+      - name: created_at
+        description: Date when the user was created
+        tests:
+          - not_null
+          - unique
